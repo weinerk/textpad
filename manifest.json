@@ -8,8 +8,5 @@
     },
     "chrome_url_overrides" : {
         "newtab" : "textedit.html"
-    },
-    "permissons" : [
-        "tabs"
-    ]
+    }
 } 

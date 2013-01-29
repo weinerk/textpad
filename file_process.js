@@ -1,7 +1,6 @@
 window.onload = function() {
     
     var pad = document.getElementById('pad');
-    var title = "Textpad";
     
     function handleWindowActive() {
         if( typeof localStorage.textpad_buffer != 'undefined') {
@@ -24,11 +23,5 @@ window.onload = function() {
     window.onbeforeunload = function() {
         saveProgress();
     };
-    
-    window.addEventListener('keydown', function(e){
-       if( e.keyCode != 27 ) return true;
-        console.log("mode switch");
-       return false;
-    });
 
 };

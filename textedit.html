@@ -5,6 +5,7 @@
         <script src="file_process.js"></script>
     </head>
     <body id="pad" contenteditable style='font-family: monospace'
+			 onkeydown="processKeyDown(event);" 
 			 onkeyup="delay(
 								function(){
 								saveProgress();

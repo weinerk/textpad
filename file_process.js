@@ -68,5 +68,22 @@ function processKeyDown(event)
 				var pad = document.getElementById('pad');
 				pad.dispatchEvent(eventObject);
 		}
+		
+		if(event.keyCode==9) //TAB
+		{ 
+				var textToInsert = "\t";
+
+				var eventObject = document.createEvent('TextEvent');
+				eventObject.initTextEvent('textInput',
+																	true,
+																	true,
+																	null,
+																	textToInsert);
+
+				var pad = document.getElementById('pad');
+				pad.dispatchEvent(eventObject);
+
+				event.preventDefault();
+		}
 }
 

@@ -27,9 +27,11 @@ window.onload = function() {
         localStorage.textpad_buffer = pad.innerHTML;
     };
     //window.addEventListener("focus", handleWindowActive);
-    window.addEventListener("blur", handleWindowBlur);
-    window.onbeforeunload = function() {
-        saveProgress();
-    };
+
+    //window.addEventListener("blur", handleWindowBlur);
+
+    //window.onbeforeunload = function() {
+    //    saveProgress();
+    //};
 
 };

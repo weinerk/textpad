@@ -4,7 +4,14 @@
         <title>Textpad</title>
         <script src="file_process.js"></script>
     </head>
-    <body id="pad" contenteditable style='font-family: monospace'>
+    <body id="pad" contenteditable style='font-family: monospace'
+			 onkeyup="delay(
+								function(){
+								saveProgress();
+								}, 
+								1000 
+								);"
+			 >
 
     </body>    
 </html>

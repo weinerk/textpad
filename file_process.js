@@ -1,3 +1,17 @@
+function saveProgress() {
+    var pad = document.getElementById('pad');
+    localStorage.textpad_buffer = pad.innerHTML;
+};
+
+var delay = (function(){
+  var timer = 0;
+  return function(callback, ms){
+    clearTimeout (timer);
+    timer = setTimeout(callback, ms);
+  };
+})();
+
+
 window.onload = function() {
     
     var pad = document.getElementById('pad');
@@ -12,11 +26,6 @@ window.onload = function() {
     function handleWindowBlur() {
         localStorage.textpad_buffer = pad.innerHTML;
     };
-    
-    function saveProgress() {
-        localStorage.textpad_buffer = pad.innerHTML;
-    };
-    
     //window.addEventListener("focus", handleWindowActive);
     window.addEventListener("blur", handleWindowBlur);
     window.onbeforeunload = function() {
